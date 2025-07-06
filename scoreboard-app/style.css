@@ -1,0 +1,156 @@
+/* Global reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100%; height:100%; overflow:hidden; background:#111; color:#fff; font-family:'Segoe UI',sans-serif; }
+
+/* Scoreboard styling */
+.scoreboard {
+  background: yellow;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+.period-title { font-size: 2.5rem; margin: 0; }
+.period-number { font-size: 4rem; font-weight: bold; margin: 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+}
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team-name { font-size: 3rem; margin-bottom: 0.5rem; }
+.team-score {
+  font-size: 6rem;
+  font-weight: bold;
+}
+.timer {
+  font-size: 7rem;
+}
+@keyframes blink-red { 0%,50%{ color:red; }51%,100%{ color:black; }}
+@keyframes blink-green { 0%,50%{ color:green; }51%,100%{ color:black; }}
+.blink-red { animation: blink-red 3s infinite; }
+.blink-green { animation: blink-green 3s infinite; }
+.time-paused { animation: blink-red 1s infinite; }
+
+/* Controller styling */
+.controller-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  padding-top: 2rem;
+}
+.controller-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.team-control {
+  background: #222;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+.team-control label {
+  font-size: 10pt;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.team-control .score {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.team-control .buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.time-control {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.time-control input {
+  width: 60px;
+  text-align: center;
+}
+.buttons-row {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.period-control {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.period-control .period-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.team-control button, .buttons-row button, .period-control button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #555;
+  color: #fff;
+  cursor: pointer;
+}
+.team-control button:hover, .buttons-row button:hover, .period-control button:hover { background: #777; }
+
+
+#nameA {
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  border: 0;
+  padding: 0;
+  background-color: #555;
+  color: white;
+}
+
+#nameB {
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  border: 0;
+  padding: 0;
+  background-color: #555;
+  color: white;
+}
+
+#duration {
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: center;
+  border: 0;
+  padding: 0;
+  background-color: #555;
+  color: white;
+}
