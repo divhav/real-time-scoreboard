@@ -50,7 +50,7 @@
 
 ```bash
 # 1. Κλωνοποίηση
-git clone https://github.com/<USERNAME>/real-time-scoreboard.git
+git clone https://github.com/divhav/real-time-scoreboard.git
 cd real-time-scoreboard
 
 # 2. Εγκατάσταση dependencies
